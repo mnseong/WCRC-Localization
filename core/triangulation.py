@@ -8,11 +8,11 @@ import numpy as np
 from tqdm import tqdm
 import pycolmap
 
-from . import logger
-from ..utils.database import COLMAPDatabase
-from ..utils.io import get_keypoints, get_matches
-from ..utils.parsers import parse_retrieval
-from ..utils.geometry import compute_epipolar_errors
+from core import logger
+from utils.database import COLMAPDatabase
+from utils.io import get_keypoints, get_matches
+from utils.parsers import parse_retrieval
+from utils.geometry import compute_epipolar_errors
 
 
 class OutputCapture:

@@ -106,7 +106,7 @@ class LocalizationPipeline:
         self.outputs.mkdir(exist_ok=True, parents=True)
         self.ref_sfm_sift = self.outputs / 'sfm_sift'
         self.ref_sfm = self.outputs / 'sfm_res'
-        self.sfm_pairs = self.outputs / f'pairs-db-retrieval.txt'
+        self.sfm_pairs = self.outputs / 'pairs-db-retrieval.txt'
         self.query_list = self.outputs / 'query_list.txt'
         self.test_list = self.gt_dir / 'list_test.txt'
 
@@ -123,7 +123,7 @@ class LocalizationPipeline:
 
     def perform_sfm(self):
         # Structure from Motion processes
-        sfm_pairs = self.outputs / f'pairs-db-retrieval.txt'
+        sfm_pairs = self.outputs / 'pairs-db-retrieval.txt'
         image_retrieval.main(descriptors=self.global_feature_conf, output=self.sfm_pairs, num_matched=20)
 
         self.sfm_matches = match.main(

@@ -4,8 +4,7 @@ import numpy as np
 import cv2
 import h5py
 
-from .parsers import names_to_pair, names_to_pair_old
-
+from utils.parsers import names_to_pair, names_to_pair_old
 
 def read_image(path, grayscale=False):
     if grayscale:

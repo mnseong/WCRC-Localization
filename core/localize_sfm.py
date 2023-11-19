@@ -7,9 +7,9 @@ from tqdm import tqdm
 import pickle
 import pycolmap
 
-from . import logger
-from ..utils.io import get_keypoints, get_matches
-from ..utils.parsers import parse_image_lists, parse_retrieval
+from core import logger
+from utils.io import get_keypoints, get_matches
+from utils.parsers import parse_image_lists, parse_retrieval
 
 
 def do_covisibility_clustering(frame_ids: List[int],

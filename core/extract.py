@@ -13,10 +13,10 @@ import PIL.Image
 from PIL import Image
 import glob
 
-from . import extractors, logger
-from ..utils.base_model import dynamic_load
-from ..utils.parsers import parse_image_lists
-from ..utils.io import read_image, list_h5_names
+from core import extractors, logger
+from utils.base_model import dynamic_load
+from utils.parsers import parse_image_lists
+from utils.io import read_image, list_h5_names
 
 configs = {
     # Local descriptors

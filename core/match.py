@@ -9,9 +9,9 @@ from tqdm import tqdm
 import h5py
 import torch
 
-from . import matchers, logger
-from ..utils.base_model import dynamic_load
-from ..utils.parsers import names_to_pair, names_to_pair_old, parse_retrieval
+from core import matchers, logger
+from utils.base_model import dynamic_load
+from utils.parsers import names_to_pair, names_to_pair_old, parse_retrieval
 
 
 configs = {

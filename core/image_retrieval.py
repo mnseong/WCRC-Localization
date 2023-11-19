@@ -6,10 +6,10 @@ import torch
 import collections.abc as collections
 
 import argparse
-from . import logger
-from ..utils.parsers import parse_image_lists
-from ..utils.read_write_model import read_images_binary
-from ..utils.io import list_h5_names
+from core import logger
+from utils.parsers import parse_image_lists
+from utils.read_write_model import read_images_binary
+from utils.io import list_h5_names
 
 
 def parse_names(prefix, names, names_all):
