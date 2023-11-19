@@ -23,17 +23,26 @@ from utils.base_model import BaseModel
 class CosPlace(BaseModel):
     default_conf = {
         'backbone': 'ResNet50',
-        'fc_output_dim' : 2048
+        'fc_output_dim': 2048
     }
     required_inputs = ['image']
-    def _init(self, conf):
+
+    def _init(self, conf, pretrained_weights_path=None):
         self.net = torch.hub.load(
             'gmberton/CosPlace',
             'get_trained_model',
             backbone=conf['backbone'],
             fc_output_dim=conf['fc_output_dim']
-        ).eval()
-        
+        )
+
+        if pretrained_weights_path is not None:
+            if torch.cuda.is_available():
+                self.net.load_state_dict(torch.load(pretrained_weights_path))
+            else:
+                self.net.load_state_dict(torch.load(pretrained_weights_path, map_location=torch.device('cpu')))
+
+        self.net.eval()
+
         mean = [0.485, 0.456, 0.406]
         std = [0.229, 0.224, 0.225]
         self.norm_rgb = tvf.Normalize(mean=mean, std=std)
