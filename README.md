@@ -16,6 +16,12 @@
     <img src="./assets/pnu_map.gif"/>
 </p>
 
+
+## 2D-3D Matching
+<p align=center>
+    <img src="./assets/matching_process.png"/>
+</p>
+
 ### Reference
 **Github**<br/>
 We refer [SuperGlue](https://github.com/magicleap/SuperGluePretrainedNetwork), [SuperPoint](https://github.com/rpautrat/SuperPoint) Github Repo <br/>
