@@ -17,7 +17,7 @@ CosPlace paper: https://arxiv.org/abs/2204.02287
 import torch
 import torchvision.transforms as tvf
 
-from ..utils.base_model import BaseModel
+from ...utils.base_model import BaseModel
 
 
 class CosPlace(BaseModel):
