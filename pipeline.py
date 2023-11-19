@@ -3,7 +3,7 @@ import pathlib
 
 import numpy as np
 
-from core import extract, match, localize_sfm, triangulation, pairs_from_retrieval
+from core import extract, match, localize_sfm, triangulation, image_retrieval
 from utils.read_write_model import read_cameras_binary, read_images_binary, read_model, write_model, read_images_text, read_cameras_text
 
 logger = logging.getLogger(__name__)
@@ -123,7 +123,7 @@ class LocalizationPipeline:
     def perform_sfm(self):
         # Structure from Motion processes
         sfm_pairs = self.outputs / f'pairs-db-retrieval.txt'
-        pairs_from_retrieval.main(descriptors=self.global_feature_conf, output=self.sfm_pairs, num_matched=20)
+        image_retrieval.main(descriptors=self.global_feature_conf, output=self.sfm_pairs, num_matched=20)
 
         self.sfm_matches = match.main(
             self.matcher_conf, sfm_pairs, self.local_feature_conf['output'], self.outputs)
