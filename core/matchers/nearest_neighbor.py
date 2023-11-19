@@ -1,6 +1,6 @@
 import torch
 
-from ..utils.base_model import BaseModel
+from ...utils.base_model import BaseModel
 
 
 def find_nn(sim, ratio_thresh, distance_thresh):
