@@ -2,6 +2,7 @@ import logging
 import pathlib
 
 import numpy as np
+import cv2
 
 from core import extract, match, localize_sfm, triangulation, image_retrieval
 from utils.read_write_model import read_cameras_binary, read_images_binary, read_model, write_model, read_images_text, read_cameras_text
