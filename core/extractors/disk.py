@@ -1,6 +1,6 @@
 import kornia
 
-from ...utils.base_model import BaseModel
+from utils.base_model import BaseModel
 
 
 class DISK(BaseModel):
