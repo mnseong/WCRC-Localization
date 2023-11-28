@@ -1,6 +1,6 @@
 # Visual Localization for Indoor Autonomous Driving System
 This repo is our solution in World Creative Robotics Contest 2023, designed by [Minseong Kweon](https://github.com/mnseong), [Sihyeong Park](https://github.com/sihyeong671).<br/>
-Oral presentation took place on November 25th at the Yeoksam Centerfield WEST.<br/>
+Oral presentation took place on November 25th at the Yeoksam Centerfield WEST. We got the Association President's Award!<br/>
 Try demo! 👉 [![Colab Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ScaWFMfsUssaOC4F7Z967u-N8itCNxkp?usp=sharing)<br/>
 
 ## Indoor 3D Map Reconstruction of Mechanical Engineering Office, Pusan National University
